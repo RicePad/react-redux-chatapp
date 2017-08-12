@@ -1,6 +1,7 @@
 /*global fetch*/
 import React, { Component } from 'react';
 import { FormGroup, FormControl, InputGroup, Glyphicon} from 'react-bootstrap'
+import Profile from '../components/Profile'
 
 
 
@@ -68,10 +69,10 @@ class App extends Component  {
                     </InputGroup.Addon>
                 </InputGroup>
             </FormGroup>
-            <div className="Profile">
-                <div>Artist Picture</div>
-                <div>Artist Name</div>
-            </div>
+            <Profile
+                artist={this.state.artist}
+            />
+            
             <div className="Image-gallery">
                 gallery
             </div>
