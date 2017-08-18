@@ -2,6 +2,8 @@
 import React, { Component } from 'react';
 import { FormGroup, FormControl, InputGroup, Glyphicon} from 'react-bootstrap'
 import Profile from '../components/Profile'
+import Gallery from '../components/Gallery'
+
 
 
 
@@ -11,7 +13,8 @@ class App extends Component  {
         
         this.state = {
           query: '',
-          artist: null
+          artist: null,
+          tracks: []
             
         };
         
@@ -24,12 +27,12 @@ class App extends Component  {
         const FETCH_URL = BASE_URL + 'q=' + this.state.query
                             + '&type=artist&limit=1';
                             
-        var accessToken = 'AQBo4_vAFqU20T2QKQigP-69odlFAJHhrC--yFC-0Pn2-2PktLkn8EeWzUdsf-B5GcPQfF5bFjzFRBmbFaGVdtV3vxuIMdkRAcZ49BDwgJwElBaWjvZ8UrPz8N8c5kq_ftHRbwKyU1OH7n0CUNc-rQ_HXGNQ28ZlWHjdWQvAUVCQ_ElWWLBUiPqjpRxyhKGBxGNw5fUcteSIwPxp046uzBt_NrQkpyJoFlD4x7shac6I-POy7I5U0i9LB2nH78SYfUOjpl2I6MLO_kw&state=YMyB9PEi94Kt7yjw'
+        var accessToken = 'AQDQxc_s007FjkYvTU7aiGMVYklcT-iWjSFZ8DN_21V0Dg4JvHsKoe3-QG1XmOqq09rHt-vy1JpqzQ7gcwcrZXCPDwpohCLP0Lhw7bti3d80AhnjbW6p6qQilhuS7udA3qDKK6tQw2DoUUqcAR8-mYG1GxtVb9Hw7k_sYyi-QEM_vckSVVF-HbOGKetQUB0LbYcWuGZdrOu0UpHiyo3ir5VFP3OCS4PWECj63Zgv2ciUoiTEKXyNZfVechpc5gYxuAYumgJLxSupetk&state=iL74EWIReTuPRa4y'
         
         var myOptions = {
               method: 'GET',
               headers: {
-                  'Authorization':'Bearer' + accessToken
+                  'Authorization':'Bearer ' + accessToken
               },
               mode: 'cors',
               cache: 'default'
@@ -37,7 +40,7 @@ class App extends Component  {
              
         console.log('FETCH_URL', FETCH_URL);
         
-        fetch(FETCH_URL, myOptions)
+      fetch(FETCH_URL, myOptions)
       .then(response => response.json())
       .then(json => console.log(json))
 
@@ -65,7 +68,7 @@ class App extends Component  {
               onChange = {event => {this.setState({query: event.target.value})}}
               onKeyPress = {event => {
                 if (event.key === 'Enter'){
-                  this.search()
+                  this.search();
                 }
               }}
             />
@@ -79,10 +82,13 @@ class App extends Component  {
         <div>Artist Name</div>
       </div>
       <div className="Gallery">
-        Gallery
+       <Gallery 
+        tracks={this.state.tracks}
+       
+       />
       </div>
       </div>
-    )
+    );
   }
 }
 
