@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { selectUser } from '../actions';
 
 
 class UserList extends Component {
@@ -8,16 +9,24 @@ class UserList extends Component {
     }
     
     renderUserList(){
-        return 
+        return this.props.users.map((user) => {
+           return (
+               <li 
+               onClick={() => this.props.selectUser(user)}
+               key={user.id}> {user.first} {user.last}</li>
+               );
+        });
         
     }
     
     
     
     render(){
-        console.log('this.props.users.first', this.props.users);
+        console.log('this.props.users.first', this.props.users && this.props.last);
         return(
-            <h1>UserList Container</h1>
+            <ul>
+                {this.renderUserList()}
+            </ul>
             );
         
     }   
@@ -33,4 +42,4 @@ function mapStateToProps(state){
     
 }
 
-export default connect(mapStateToProps)(UserList);
+export default connect(mapStateToProps, {selectUser})(UserList);

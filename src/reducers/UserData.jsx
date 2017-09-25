@@ -20,8 +20,8 @@ export default function() {
           
       },
       {
-          id: 2,
-          first: "Jon",
+          id: 3,
+          first: "Fat Jon",
           last: "Li",
           age: 71,
           description: "heavy lifter fanatic",
