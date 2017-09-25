@@ -1,14 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './components/App';
 // For Redux integration
-import { Provider } from 'redux';
-import { connectStore } from 'redux';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import reducers from './reducers';
 
-
+const store = createStore(reducers);
 const userList = document.getElementById('user-list');
 
 ReactDOM.render(
-  <h1>Hello World!</h1>, document.getElementById('user-list')
+ <Provider store={store}>       
+    <App />
+ </Provider>, userList
   );
 
 
