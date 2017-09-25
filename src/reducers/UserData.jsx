@@ -7,7 +7,7 @@ export default function() {
           last: "Li",
           age: 71,
           description: "heavy lifter fanatic",
-          thumbnail: "https://i.pinimg.com/originals/00/8b/f3/008bf32de1f0a838bcfc803e22e7ec83.jpg"
+          thumbnail: "https://68.media.tumblr.com/219ce6249c79a655857c45006a5d496d/tumblr_inline_nnn6qqffFl1r5ight_500.gif"
           
       },
       {
@@ -25,7 +25,7 @@ export default function() {
           last: "Li",
           age: 71,
           description: "heavy lifter fanatic",
-          thumbnail: "https://i.ytimg.com/vi/TK-4NwmqUSQ/maxresdefault.jpg"
+          thumbnail: "https://i.imgflip.com/vct2z.jpg"
           
       }
       
