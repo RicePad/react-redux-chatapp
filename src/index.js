@@ -5,10 +5,16 @@ import App from './components/App';
 // redux set up
 import { Provider } from 'react-redux'
 import { createStore } from 'redux';
-// import reducers from './reducers'
+import reducers from './reducers'
 
-const idRoot= document.getElementById('root')
+const store = createStore(reducers);
+
+
+
+const idRoot= document.getElementById('root');
 
 ReactDOM.render(
-    <App />, idRoot
+    <Provider store={store}>
+        <App />
+    </Provider>, idRoot
     );
