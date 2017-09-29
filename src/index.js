@@ -4,11 +4,25 @@ import App from './components/App';
 
 // redux set up
 import { Provider } from 'react-redux'
-import { createStore } from 'redux';
+import {compose, applyMiddleware, createStore } from 'redux';
 import reducers from './reducers'
 
-const store = createStore(reducers);
+//
+import {persistStore, autoRehydrate} from 'redux-persist';
+import { createLogger } from 'redux-logger';
+import thunk from 'redux-thunk';
 
+
+const middleware = [ thunk ];
+
+
+
+// middleware.push(createLogger());
+
+const store = createStore(reducers,compose(applyMiddleware(...middleware),autoRehydrate()));
+
+// begin periodically persisting the store
+// persistStore(store)
 
 
 const idRoot= document.getElementById('root');
