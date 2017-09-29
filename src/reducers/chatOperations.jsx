@@ -10,28 +10,22 @@ const initialState = [{
     inbound: true
 }];
 
-export default function chatOperations(state = initialState, action){
-    switch(action.type) {
+export default function chatOperations(state = initialState, action) {
+    switch (action.type) {
         case POST_MESSAGES:
             return [
                 ...state,
                 {
                     message: action.message,
                     from: 'right',
-                    backColor: 'green',
+                    backColor: "green",
                     textColor: "white",
                     avatar: action.avatar,
                     duration: 2000,
                     inbound: false
-                    
                 }
-        
-        ];
-        
+            ]
         default:
-        
-        return state;
-        
+            return state
     }
-    
 }

@@ -17,12 +17,12 @@ const middleware = [ thunk ];
 
 
 
-// middleware.push(createLogger());
+middleware.push(createLogger());
 
 const store = createStore(reducers,compose(applyMiddleware(...middleware),autoRehydrate()));
 
 // begin periodically persisting the store
-// persistStore(store)
+persistStore(store);
 
 
 const idRoot= document.getElementById('root');

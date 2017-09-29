@@ -17,8 +17,12 @@ class ChatInput extends Component {
     
     handlePostClick(event){
         console.log('button clicked!')
+        this.props.actions.postMessage(this.state.messageValue,"http://res.cloudinary.com/technoetics/image/upload/v1491538348/technoetics/profilepenguin.png")
     }
     
+    componentWillReceiveProps(nextProps){
+        // console.log("nextpoprs in vahtinupt",nextProps);
+    }
     
     
     render(){
@@ -36,7 +40,7 @@ class ChatInput extends Component {
                 onChange={(event) => {this.handleChatMessage(event)}}
             />
             <br />
-            <Button bsStyle="primary" onClick={(event) =>  {this.handlePostClick(event)}}> Send Message</Button>
+            <Button bsStyle="primary" onClick={(event) => this.handlePostClick(event)}> Send Message</Button>
            </div>
            
             );
