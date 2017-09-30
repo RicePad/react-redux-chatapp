@@ -20,12 +20,12 @@ class App extends Component {
                 <Grid>
                     <Row className="show-grid">
                         
-                        <Col xs={12} md={8}>
+                        <Col xs={12} md={6}>
                                 <GroupChat messageItems={this.props.messageItems} actions={this.props.actions}/>
                         </Col>
-                        <Col xs={12} md={4}>
-                          <ChatInput messageItems={this.props.messageItems} actions={this.props.actions} userIndex={1}/>
-                          <ChatInput messageItems={this.props.messageItems} actions={this.props.actions} userIndex={2}/>
+                        <Col xs={12} md={6}>
+                          <ChatInput className="input-text"  messageItems={this.props.messageItems} actions={this.props.actions} userIndex={1}/>
+                          <ChatInput className="input-text"   messageItems={this.props.messageItems} actions={this.props.actions} userIndex={2}/>
 
                         </Col>
                     </Row>

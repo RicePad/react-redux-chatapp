@@ -1,11 +1,17 @@
 
 .conversation {
   background-color: pink;    
-  position: relative;
+  position: inherit;
+  top: 400px;
   bottom: 0;
   right: 20px;
-  width: 10000px;
+  width: 500px;
   
   
   }
+  
+.input-text {
+  padding: 1000px;  
+
+}
   
