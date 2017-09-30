@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { deleteMessage } from '../actions'
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
 
 
@@ -30,7 +33,7 @@ class GroupChat extends Component {
       {
           messages.map(text => {
               return (
-                  <li>{text.message}</li>
+                  <li>{text.message}<div onClick={() => this.deleteMessage(text.message)}> &#x2715;</div></li>
                   );
           })
           
@@ -38,7 +41,11 @@ class GroupChat extends Component {
       </ul>
         );
     }
-    
+    s
+    deleteMessage = (message) => {
+        this.props.deleteMessage(message);
+        
+    }
     
     
     render(){
@@ -60,4 +67,9 @@ class GroupChat extends Component {
     }
 }
 
-export default GroupChat;
+
+const mapDispatchToProps = dispatch => ({
+  actions: bindActionCreators( deleteMessage, dispatch)
+});
+
+export default connect(null, mapDispatchToProps)(GroupChat);

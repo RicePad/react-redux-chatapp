@@ -9,6 +9,7 @@ import { postMessage } from '../actions';
 
 import { bindActionCreators } from 'redux';
 import * as messageActions from '../actions';
+import { deleteMessage } from '../actions';
 
 
 class App extends Component {
@@ -39,8 +40,8 @@ class App extends Component {
 
 
 const mapDispatchToProps = dispatch => ({
-  actions: bindActionCreators(messageActions, dispatch)
-})
+  actions: bindActionCreators(messageActions, deleteMessage, dispatch)
+});
 
 function mapStateToProps(state){
     return {

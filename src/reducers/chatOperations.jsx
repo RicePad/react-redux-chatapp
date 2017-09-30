@@ -1,4 +1,4 @@
-import { POST_MESSAGES } from '../actions';
+import { POST_MESSAGES, DELETE_MESSAGE } from '../actions';
 
 const initialState = [{
     message: 'How do I use this messaging app?',
@@ -10,7 +10,15 @@ const initialState = [{
     inbound: true
 }];
 
+
+const removeById = (state=[], message) => {
+    const messages = state.filter(message => message !==message)
+    return messages
+}
+
+
 export default function chatOperations(state = initialState, action) {
+    let messages = null;
     switch (action.type) {
         case POST_MESSAGES:
             return [
@@ -24,7 +32,12 @@ export default function chatOperations(state = initialState, action) {
                     duration: 2000,
                     inbound: false
                 }
+                
+               
             ]
+             case DELETE_MESSAGE:
+                   messages = removeById(state, action.message)
+                   return messages
         default:
             return state
     }

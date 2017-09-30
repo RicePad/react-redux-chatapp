@@ -1,5 +1,5 @@
 export const POST_MESSAGES = "POST_MESSAGES";
-
+export const DELETE_MESSAGE = "DELETE_MESSAGE";
 
 export const postMessage = (message, avatar) => ({
     type: POST_MESSAGES, 
@@ -7,3 +7,12 @@ export const postMessage = (message, avatar) => ({
     avatar
     
 })
+
+
+export const deleteMessage = (message) =>{
+    return {
+        type: DELETE_MESSAGE,
+        message
+        
+    };
+};
