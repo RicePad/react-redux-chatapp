@@ -46,7 +46,7 @@ class GroupChat extends Component {
             <div className="groupChatContainer">
                 <span className="groupChatText">
                     <h4 ><b>GroupChat Messages</b></h4>
-                    <section  >
+                    <section height={400} style={{width: 400}} messages={this.state.messages}>
                             {this.renderMessages()}    
                             
                     </section>

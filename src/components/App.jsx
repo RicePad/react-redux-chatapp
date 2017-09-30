@@ -23,7 +23,7 @@ class App extends Component {
                         <Col xs={12} md={6}>
                                 <GroupChat messageItems={this.props.messageItems} actions={this.props.actions}/>
                         </Col>
-                        <Col xs={12} md={6}>
+                        <Col xs={12} md={8}>
                           <ChatInput className="input-text"  messageItems={this.props.messageItems} actions={this.props.actions} userIndex={1}/>
                           <ChatInput className="input-text"   messageItems={this.props.messageItems} actions={this.props.actions} userIndex={2}/>
 

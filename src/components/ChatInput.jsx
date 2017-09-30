@@ -28,7 +28,7 @@ class ChatInput extends Component {
     render(){
         return(
            <div>
-            User 1
+            User {this.props.userIndex}
             <br/>
             <input
                 type="text"
