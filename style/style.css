@@ -1,17 +1,79 @@
 
+/*html, body {*/
+/*    background: #e5e5e5;*/
+/*    font-family: 'Lato', sans-serif;*/
+/*    margin: 0px auto;*/
+/*}*/
+/*::selection{*/
+/*  background: rgba(82,179,217,0.3);*/
+/*  color: inherit;*/
+/*}*/
+a{
+  color: rgba(82,179,217,0.9);
+}
+
+/* M E N U */
+
+.menu {
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 50px;
+    background: rgba(82,179,217,0.9);
+    z-index: 100;
+   
+}
 .conversation {
-  background-color: lightgreen;    
-  position: inherit;
-  top: 400px;
-  bottom: 0;
-  right: 20px;
-  width: 500px;
+  background: lightgreen;
+    font-family: 'Lato', sans-serif;
+    margin: 0px auto;
+ 
   
   
   }
   
-.input-text {
-  padding: 1000px;  
+/*.input-text {*/
+/*  padding: 1000px;  */
 
-}
+/*}*/
   
+  
+  
+
+/* T Y P E */
+
+input.textarea {
+    position: relative;
+    bottom: 0px;
+    top: 200;
+    left: px;
+    right: 0px;
+    width: 100%;
+    height: 50px;
+    z-index: 99;
+    background: #fafafa;
+    border: none;
+    outline: none;
+    padding-left: 55px;
+    padding-right: 55px;
+     color: #666;
+    font-weight: 400;
+}
+
+.group-title{
+  
+    position: relative;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 50px;
+    background: lightgreen;
+    z-index: 100;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}

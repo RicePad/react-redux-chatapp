@@ -30,16 +30,17 @@ class ChatInput extends Component {
            <div>
             User {this.props.userIndex}
             <br/>
-            <input
+            <input  
                 type="text"
-                className="messageValueInput"
+                className="textarea"
+                placeholder="type here"
                 id="messageValueInput"
                 name="messageValueInput"
                 key="messageValueInput"
                 value={this.state.messageValue}
                 onChange={(event) => {this.handleChatMessage(event)}}
             />
-            <br />
+         
             <Button bsStyle="primary" onClick={(event) => this.handlePostClick(event)}> Send Message</Button>
            </div>
            

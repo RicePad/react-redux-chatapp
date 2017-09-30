@@ -20,7 +20,7 @@ class App extends Component {
                 <Grid>
                     <Row className="show-grid">
                         
-                        <Col xs={12} md={6}>
+                        <Col xs={12} md={6} >
                                 <GroupChat messageItems={this.props.messageItems} actions={this.props.actions}/>
                         </Col>
                         <Col xs={12} md={8}>

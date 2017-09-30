@@ -26,7 +26,7 @@ class GroupChat extends Component {
         
         return (
             
-        <ul className="conversation">    
+        <ul classNameName="conversation">    
       {
           messages.map(text => {
               return (
@@ -43,12 +43,14 @@ class GroupChat extends Component {
     
     render(){
         return(
-            <div className="groupChatContainer">
-                <span className="groupChatText">
-                    <h4 ><b>GroupChat Messages</b></h4>
-                    <section height={400} style={{width: 400}} messages={this.state.messages}>
+            <div classNameName="groupChatContainer">
+                <span classNameName="menu">
+                    <h4 className="group-title"><b>GroupChat Messages</b></h4>
+                    <section className="conversation " height={400} style={{width: 400}} messages={this.state.messages}>
                             {this.renderMessages()}    
-                            
+       
+            
+                                    
                     </section>
                 </span>
                 
