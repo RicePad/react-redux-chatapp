@@ -1,13 +1,13 @@
 
-/*html, body {*/
-/*    background: #e5e5e5;*/
-/*    font-family: 'Lato', sans-serif;*/
-/*    margin: 0px auto;*/
-/*}*/
-/*::selection{*/
-/*  background: rgba(82,179,217,0.3);*/
-/*  color: inherit;*/
-/*}*/
+html, body {
+    background: #e5e5e5;
+    font-family: 'Lato', sans-serif;
+    margin: 0px auto;
+}
+::selection{
+  background: rgba(82,179,217,0.3);
+  color: inherit;
+}
 a{
   color: rgba(82,179,217,0.9);
 }
